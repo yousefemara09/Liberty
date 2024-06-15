@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>liberty</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/7b171423f8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @media (min-width: 524px) {
+        .container {
+          width: 520px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          width: 750px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .container {
+          width: 970px;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .container {
+          width: 1150px;
+        }
+      }
+
+      body {
+        margin: 0%;
+        padding: 0%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        box-sizing: border-box;
+        background-color: var(--mainColor2);
+      }
+
+      .container {
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      :root {
+        --mainColor: #9b26d5;
+        --mainColor2: #422351;
+      }
+
+      *::selection {
+        background-color: var(--mainColor);
+        color: aliceblue;
+      }
+      /* ******************************************* */
+
+      header {
+        background-image: url(Liberty/background.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: white;
+        margin-top: 0px;
+        border-radius: 50px;
+        width: 900px;
+        position: relative;
+        top: 20px;
+        padding-left: 70px;
+        padding-right: 70px;
+      }
+
+      .container img {
+        width: 170px;
+        margin-left: 5px;
+      }
+
+      .container nav {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+      }
+
+      .container nav ul {
+        display: flex;
+        position: relative;
+      }
+
+      .container nav ul li {
+        display: flex;
+        margin-left: 30px;
+      }
+
+      .container nav ul li a {
+        text-decoration: none;
+        color: black;
+        transition: 0.5s;
+      }
+
+      .container nav ul li a:hover {
+        background-color: var(--mainColor);
+        color: white;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-radius: 25px;
+      }
+
+      .content {
+        padding: 10px;
+        width: calc(100% - 20px);
+        position: relative;
+      }
+
+      .content .overlay {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 100px;
+      }
+
+      @media (max-width: 991px) {
+        .content .overlay {
+          display: block;
+        }
+        .content .back {
+          position: relative;
+        }
+      }
+
+      .content .text {
+        width: 650px;
+      }
+
+      .content .text h2 {
+        margin-top: 55px;
+        font-size: 20px;
+        color: white;
+        font-family: sans-serif;
+        font-weight: normal;
+      }
+
+      .content .text h4 {
+        width: 97%;
+        color: white;
+        font-weight: 400;
+        font-size: 70px;
+        position: relative;
+        margin-top: -10px;
+      }
+
+      .content .text p {
+        color: white;
+      }
+
+      .content .back {
+        display: flex;
+        gap: 35px;
+        position: absolute;
+        bottom: -20px;
+      }
+
+      .content .back a::after {
+        content: "";
+        background-color: white;
+        height: 2px;
+        width: 75%;
+        bottom: 0px;
+        left: 21px;
+        position: absolute;
+      }
+
+      .content .back .one,
+      .content .back .two {
+        color: white;
+        text-decoration: none;
+        border: 1px solid var(--mainColor);
+        padding: 10px;
+        border-radius: 40px;
+        transition: 0.5s;
+        position: relative;
+      }
+
+      .content .back .one {
+        font-weight: 700;
+        background-color: white;
+        color: var(--mainColor);
+      }
+
+      .content .back .one:hover {
+        background-color: var(--mainColor);
+        color: white;
+      }
+
+      .content .back .two {
+        background-color: var(--mainColor);
+        border: none;
+      }
+
+      .content .back .two:hover {
+        background-color: white;
+        color: var(--mainColor);
+      }
+
+      .content .photo {
+        display: flex;
+        position: relative;
+        max-width: 100%;
+        max-height: 420px;
+      }
+
+      .content .photo i {
+        color: var(--mainColor);
+        position: absolute;
+        top: 105%;
+        left: 56%;
+        background-color: white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 15px;
+        line-height: 50px;
+        transition: 0.5s;
+      }
+
+      .content .photo i:hover {
+        background-color: var(--mainColor);
+        color: white;
+      }
+
+      .content .photo img {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        animation-name: name;
+        animation-timing-function: linear;
+        animation-duration: 15s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 3;
+      }
+
+      @keyframes name {
+        0% {
+          transform: rotateY(0deg);
+        }
+        10% {
+          transform: rotateY(180deg);
+        }
+        15% {
+          transform: rotateY(180deg);
+        }
+        20% {
+          transform: rotateY(0deg);
+        }
+        30% {
+          transform: rotateY(0deg);
+        }
+        40% {
+          transform: rotateY(180deg);
+        }
+        45% {
+          transform: rotateY(180deg);
+        }
+        50% {
+          transform: rotateY(0deg);
+        }
+        60% {
+          transform: rotateY(0deg);
+        }
+        70% {
+          transform: rotateY(180deg);
+        }
+        75% {
+          transform: rotateY(180deg);
+        }
+        80% {
+          transform: rotateY(0deg);
+        }
+        90% {
+          transform: rotateY(0deg);
+        }
+        100% {
+          transform: rotateY(180deg);
+        }
+      }
+
+      .content .photo .fa-angle-left {
+        margin-left: -70px;
+      }
+      /*******************************************************/
+      /*******************************************************/
+      /*******************************************************/
+
+      section {
+        background-image: url(Liberty/dark-bg.jpg);
+        background-size: cover;
+        width: 100%;
+        background-position: center center;
+      }
+
+      section .details {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      section .details .text {
+        width: 100%;
+      }
+
+      section .details .text h3 {
+        text-align: center;
+        color: white;
+        font-weight: 400;
+        margin-top: 50px;
+        position: relative;
+      }
+
+      section .details .text .one {
+        color: var(--mainColor);
+        text-decoration: overline;
+      }
+
+      section .details .cards {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 30px;
+      }
+
+      section .details .cards h4 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #282b30;
+        padding: 50px;
+        border-radius: 20px;
+        border: 1px solid #3f454f;
+        color: white;
+        font-weight: 400;
+        cursor: pointer;
+        transition: 0.5s;
+        margin-top: 15px;
+      }
+
+      section .details .cards h4:hover {
+        transform: scale(1.1);
+      }
+
+      section .details .cards img {
+        width: 26px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 22px;
+        margin-bottom: 10px;
+      }
+      /**********************************************************************/
+      /**********************************************************************/
+      /**********************************************************************/
+
+      section p {
+        text-align: center;
+        color: aliceblue;
+        font-weight: 300;
+        margin-top: 100px;
+        margin-bottom: auto;
+        position: relative;
+      }
+
+      section .two {
+        color: var(--mainColor);
+        text-decoration: overline;
+      }
+
+      .contents {
+        display: flex;
+        width: calc(100% -20px);
+      }
+
+      .contents .detail {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 50px;
+      }
+
+      .contents .detail .box {
+        color: aliceblue;
+        border: 1px solid #3e4653;
+        border-radius: 20px;
+        position: relative;
+        height: 500px;
+      }
+
+      .contents .detail .box img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+
+      .contents .detail .box .text {
+        padding-left: 25px;
+      }
+
+      .contents .detail .box h3 {
+        font-weight: 300;
+        position: relative;
+      }
+
+      .contents .detail .box h4 {
+        display: inline-block;
+        margin-left: 20px;
+      }
+
+      .contents .detail .box span {
+        font-weight: 300;
+      }
+
+      .contents .detail .box a {
+        position: absolute;
+        bottom: -20px;
+        left: 7px;
+        background-color: var(--mainColor);
+        color: white;
+        width: calc(100% - 35px);
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 20px;
+        text-align: center;
+      }
+
+      .contents .detail .box a::after {
+        content: "";
+        position: absolute;
+        background-color: #ddd;
+        width: calc(100% - 50px);
+        height: 2px;
+        bottom: 0px;
+        left: 25px;
+      }
+      /*********************************************************************/
+      /********************************************************************/
+      /*********************************************************************/
+      /********************************************************************/
+
+      .bts {
+        background-image: url(Liberty/light-bg.jpg);
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 70vh;
+      }
+
+      .bts .information {
+        padding-top: 40px;
+      }
+
+      .bts .information .box {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 30%;
+      }
+
+      .bts .information .special {
+        position: relative;
+        color: white;
+        font-weight: 600;
+        font-size: 28px;
+      }
+
+      .bts .information .special:after {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 0;
+        width: 100px;
+        height: 2px;
+        background-color: white;
+      }
+
+      .bts .information a {
+        text-decoration: none;
+        color: white;
+        background-color: var(--mainColor2);
+        padding: 13px;
+        border-bottom: 1px solid white;
+        border-radius: 30px;
+      }
+
+      .bts .information .photo {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 50vh;
+      }
+
+      .bts .information .photo .box-inform {
+        width: 400px;
+        counter-increment: cac;
+        position: relative;
+      }
+
+      .bts .information .photo .box-inform::after {
+        content: counter(cac);
+        position: absolute;
+        top: -40px;
+        right: 30px;
+        color: white;
+      }
+
+      .bts .information .photo .box-inform::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 35px;
+        height: 100%;
+        width: 1px;
+        background-color: white;
+        color: white;
+      }
+
+      .bts .information .photo .box-inform img {
+        background-color: white;
+        padding: 10px;
+        border-radius: 40%;
+      }
+
+      .bts .information .photo .box-inform h4 {
+        color: white;
+      }
+
+      .bts .information .photo .box-inform p {
+        font-size: 15px;
+        color: white;
+        width: 350px;
+      }
+
+      footer {
+        background-image: url(Liberty/dark-bg.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 130px;
+      }
+
+      footer .contain {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 20px;
+      }
+
+      footer .contain .text h3 {
+        color: white;
+        font-weight: 600;
+        width: 400px;
+        text-align: end;
+      }
+
+      footer .contain .text span {
+        color: var(--mainColor);
+        text-decoration: overline;
+      }
+
+      footer .contain nav {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      footer .contain nav ul {
+        display: flex;
+        width: 750px;
+        justify-content: flex-end;
+        gap: 35px;
+      }
+
+      footer .contain nav li {
+        list-style-type: none;
+      }
+
+      footer .contain ul li a {
+        text-decoration: none;
+        color: white;
+        background-color: var(--mainColor);
+        padding: 8px;
+        border-radius: 20px;
+        transition: 0.5s;
+      }
+
+      footer .contain ul li a:hover {
+        color: var(--mainColor);
+        background-color: white;
+      }
+
+      .sec {
+        background-image: url(Liberty/dark-bg.jpg);
+        background-position: center;
+        width: 100%;
+      }
+
+      p,
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+      }
+
+      .sec .details {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 525px);
+        justify-content: space-evenly;
+      }
+
+      .sec .details .card-details {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #282b2f;
+        padding: 20px 0px;
+        margin-bottom: 25px;
+        border-radius: 22px;
+      }
+
+      .sec .details .card-details .box-im img {
+        border-radius: 10px;
+        width: 140px;
+        height: 100%;
+      }
+
+      .sec .details .card-details .box-inf {
+        display: block;
+      }
+
+      .sec .details .card-details .box-inf h4 {
+        color: aliceblue;
+        font-weight: 400;
+        margin-bottom: 15px;
+      }
+
+      .sec .details .card-details .box-inf .box-image img {
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+      }
+
+      .sec .details .card-details .box-inf .box-details {
+        display: block;
+      }
+
+      .sec .details .card-details .box-inf .box-details h1 {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        position: relative;
+        left: 85px;
+        top: -55px;
+        width: 110px;
+      }
+
+      .sec .details .card-details .box-inf .box-inform {
+        display: flex;
+        width: 100%;
+        gap: 26px;
+        color: white;
+        font-size: 12px;
+        margin-top: -30px;
+      }
+
+      .box-inform1 h4,
+      .box-inform2 h4 {
+        font-size: 17px;
+      }
+
+      .box-inform1 h2,
+      .box-inform2 h2 {
+        margin-top: 10px;
+        font-weight: 400;
+      }
+
+      .box-inform1 h3,
+      .box-inform2 h3 {
+        font-size: 19px;
+      }
+
+      .landing {
+        background-image: url(Liberty/light-bg.jpg);
+        height: 20vh;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .landing .content {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 20px);
+      }
+
+      .landing .content p {
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+        color: aliceblue;
+      }
+
+      .landing .content .social {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        height: 60px;
+        align-items: center;
+      }
+
+      .landing .content .social h3 {
+        font-weight: 600;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <img src="Liberty/logo.png" alt="" />
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">item DEtails</a></li>
+            <li><a href="#">Author</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="content">
+        <div class="overlay">
+          <div class="text">
+            <h2>Liberty NFT Market</h2>
+            <h4>Create, Sell& Collect Top Nft's</h4>
+            <p>
+              Liberty NFT Market is a really cool and professional design for
+              your NFT websites. This HTML CSS template is based on Bootstrap v5
+              and it is designed for NFT related web portals. Liberty can be
+              freely downloaded from TemplateMo's free css templates.
+            </p>
+            <div class="back">
+              <a href="#" class="one">Exploew Top NFTS</a>
+              <a href="#" class="two">Watch our videos</a>
+            </div>
+          </div>
+          <div class="photo">
+            <img src="Liberty/banner-02.png" alt="" />
+            <i class="fa-solid fa-angle-left"></i>
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="details">
+        <div class="text">
+          <h3>Browse Through Our <span class="one">Categories</span> Here</h3>
+        </div>
+        <div class="cards">
+          <h4><img src="Liberty/icon-01.png" alt="" />Blockchain</h4>
+          <h4><img src="Liberty/icon-02.png" alt="" />Digital Art</h4>
+          <h4><img src="Liberty/icon-03.png" alt="" />Music art</h4>
+          <h4><img src="Liberty/icon-04.png" alt="" />Virtual</h4>
+          <h4><img src="Liberty/icon-05.png" alt="" />Valuable</h4>
+          <h4><img src="Liberty/icon-06.png" alt="" />Triple NFT</h4>
+        </div>
+      </div>
+      <p>Explore Some Hot <span class="two">Collections</span> In Market.</p>
+
+      <div class="contents">
+        <div class="detail">
+          <div class="box">
+            <img src="Liberty/collection-01.jpg" alt="" />
+            <div class="text">
+              <h3>Bored Ape Kennel Club</h3>
+              <h4 style="margin-left: 0px">
+                Items In Collections: <br /><span>324/324</span>
+              </h4>
+              <h4>Categores: <br /><span>Visual Art</span></h4>
+            </div>
+            <a href="#">Explore Worldwise</a>
+          </div>
+          <div class="box">
+            <img src="Liberty/collection-01.jpg" alt="" />
+            <div class="text">
+              <h3>Geneosis Collective Statue</h3>
+              <h4 style="margin-left: 0px">
+                Items In Collections: <br /><span>380/394</span>
+              </h4>
+              <h4>Categores: <br /><span>Music Art</span></h4>
+            </div>
+            <a href="#">Explore Worldwise</a>
+          </div>
+          <div class="box">
+            <img src="Liberty/collection-01.jpg" alt="" />
+            <div class="text">
+              <h3>WorldWide Artwork Ground</h3>
+              <h4 style="margin-left: 0px">
+                Items In Collections: <br /><span>420/468</span>
+              </h4>
+              <h4>Categores: <br /><span>Blockchain</span></h4>
+            </div>
+            <a href="#">Explore Worldwise</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="bts">
+      <div class="information">
+        <div class="box">
+          <p class="special">Create Your NFT & Put It On The Market.</p>
+          <a href="#">Create Your NFT Now</a>
+        </div>
+        <div class="photo">
+          <div class="box-inform">
+            <img src="Liberty/1.png" alt="" />
+            <h4>Set Up Your Wallet</h4>
+            <p>
+              NFT means Non-Fungible Token that are used in digital
+              cryptocurrency markets. There are many different kinds of NFTs in
+              the industry.
+            </p>
+          </div>
+          <div class="box-inform">
+            <img src="Liberty/2.png" alt="" />
+            <h4>Add Your Digital NFT</h4>
+            <p>
+              There are 5 different HTML pages included in this NFT website
+              template. You can edit or modify any section on any page as you
+              required.
+            </p>
+          </div>
+          <div class="box-inform">
+            <img src="Liberty/3.png" alt="" />
+            <h4>Sell Your NFT & Make Profit</h4>
+            <p>
+              If you would like to support our TemplateMo website, please visit
+              our contact page to make a PayPal contribution. Thank you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="contain">
+        <div class="text">
+          <h3><span>Items</span> Currently In The Market.</h3>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">All Items</a></li>
+            <li><a href="#">Music Art</a></li>
+            <li><a href="#">Digital Art</a></li>
+            <li><a href="#">Blockchain </a></li>
+            <li><a href="#">Virtual</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <div class="sec">
+      <div class="details">
+        <div class="card-details">
+          <div class="box-im">
+            <img src="Liberty/market-01.jpg" alt="" />
+          </div>
+          <div class="box-inf">
+            <h4>Blockchain Music Design</h4>
+            <div class="box-image">
+              <img src="Liberty/current-01.jpg" alt="" />
+            </div>
+            <div class="box-details">
+              <h1>Liberty Artist @libertyart</h1>
+            </div>
+            <div class="box-inform">
+              <div class="box-inform1">
+                <h4>Current Bid</h4>
+                <h3>2.03ETH</h3>
+                <h2>($7,200.50)</h2>
+              </div>
+              <div class="box-inform2">
+                <h4>Current Bid</h4>
+                <h3>5D 10H 22M 24S</h3>
+                <h2>(July 18th, 2022)</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-details">
+          <div class="box-im">
+            <img src="Liberty/market-01.jpg" alt="" />
+          </div>
+          <div class="box-inf">
+            <h4>Music Art Super Item</h4>
+            <div class="box-image">
+              <img src="Liberty/current-02.jpg" alt="" />
+            </div>
+            <div class="box-details">
+              <h1>Liberty Artist @libertyart</h1>
+            </div>
+            <div class="box-inform">
+              <div class="box-inform1">
+                <h4>Current Bid</h4>
+                <h3>2.03ETH</h3>
+                <h2>($15,200.50)</h2>
+              </div>
+              <div class="box-inform2">
+                <h4>Current Bid</h4>
+                <h3>5D 10H 22M 24S</h3>
+                <h2>(July 18th, 2022)</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-details">
+          <div class="box-im">
+            <img src="Liberty/market-01.jpg" alt="" />
+          </div>
+          <div class="box-inf">
+            <h4>Digital Crypto Artwork</h4>
+            <div class="box-image">
+              <img src="Liberty/current-03.jpg" alt="" />
+            </div>
+            <div class="box-details">
+              <h1>Liberty Artist @libertyart</h1>
+            </div>
+            <div class="box-inform">
+              <div class="box-inform1">
+                <h4>Current Bid</h4>
+                <h3>2.03ETH</h3>
+                <h2>($10,200.50)</h2>
+              </div>
+              <div class="box-inform2">
+                <h4>Current Bid</h4>
+                <h3>7D 10H 12M 24S</h3>
+                <h2>(July 18th, 2022)</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-details">
+          <div class="box-im">
+            <img src="Liberty/market-01.jpg" alt="" />
+          </div>
+          <div class="box-inf">
+            <h4>Blockchain Item One</h4>
+            <div class="box-image">
+              <img src="Liberty/current-04.jpg" alt="" />
+            </div>
+            <div class="box-details">
+              <h1>Liberty Artist @libertyart</h1>
+            </div>
+            <div class="box-inform">
+              <div class="box-inform1">
+                <h4>Current Bid</h4>
+                <h3>2.03ETH</h3>
+                <h2>($3,200.50)</h2>
+              </div>
+              <div class="box-inform2">
+                <h4>Current Bid</h4>
+                <h3>5D 10H 22M 24S</h3>
+                <h2>(July 18th, 2022)</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-details">
+          <div class="box-im">
+            <img src="Liberty/market-01.jpg" alt="" />
+          </div>
+          <div class="box-inf">
+            <h4>Virtual Currency Art</h4>
+            <div class="box-image">
+              <img src="Liberty/current-01.jpg" alt="" />
+            </div>
+            <div class="box-details">
+              <h1>Liberty Artist @libertyart</h1>
+            </div>
+            <div class="box-inform">
+              <div class="box-inform1">
+                <h4>Current Bid</h4>
+                <h3>2.03ETH</h3>
+                <h2>($2,200.50)</h2>
+              </div>
+              <div class="box-inform2">
+                <h4>Current Bid</h4>
+                <h3>5D 09H 22M 24S</h3>
+                <h2>(July 10th, 2022)</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-details">
+          <div class="box-im">
+            <img src="Liberty/market-01.jpg" alt="" />
+          </div>
+          <div class="box-inf">
+            <h4>Digital Art Item</h4>
+            <div class="box-image">
+              <img src="Liberty/current-02.jpg" alt="" />
+            </div>
+            <div class="box-details">
+              <h1>Liberty Artist @libertyart</h1>
+            </div>
+            <div class="box-inform">
+              <div class="box-inform1">
+                <h4>Current Bid</h4>
+                <h3>2.223ETH</h3>
+                <h2>($4,200.50)</h2>
+              </div>
+              <div class="box-inform2">
+                <h4>Current Bid</h4>
+                <h3>3D 10H 22M 24S</h3>
+                <h2>(July 12th, 2022)</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="landing">
+      <div class="content">
+        <div class="social">
+          <h3>+2001068445037</h3>
+          <h3>Yemara97@gmail.com</h3>
+        </div>
+        <p>
+          Copyright &copy; Youssef Ibrahim 2022 Liberty NFT Marketplace Co.,
+          Ltd. All rights reserved
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
